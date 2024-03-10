@@ -165,8 +165,60 @@ To get the list of all changes (commits) what had been done in one line view
   git pull <remote>
 ```
 
-## Work with remote projects
+## Update remote branch info
 
-1. git fetch
-2. git pull
-3. git branch
+1. If you have some worrking code and if you don't want to make commit, you may save this in stash
+
+```bash
+  git stash
+```
+
+2. Check on what branch you are right now
+
+```bash
+  git branch
+```
+
+3. Move to branch you need
+
+```bash
+  git checkout <neded branch>
+```
+
+4. Download chenges from neded branch to your local branch but not merge with it
+
+```bash
+  git fetch
+```
+
+5. Pull (merge with your local branch) all the changes from neded branch
+
+```bash
+  git pull origin <neded branch>
+```
+
+6. Now you have to resolve the conflicts. After resolving you can move to your working branch
+
+```bash
+  git checkout <working branch>
+```
+
+7. To return to your previous code which have stashed, look which id have your saved code
+
+```bash
+  git stash list
+```
+
+8. Return your code according current id
+
+```bash
+  git stash apply <id>
+```
+
+9. You can leave this code in stash or if you want to delete this from stash use this command:
+
+```bash
+  git stash drop <id>
+```
+
+10. And continue to work :)
