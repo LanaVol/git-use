@@ -76,10 +76,22 @@ To get previous history of commits
 
 ## Colaborations
 
-To create adding branche
+To create adding branch with name 'new branch'
+
+```bash
+  git checkout -b <new branch>
+```
+
+To switch another branch 'master'
 
 ```bash
   git checkout master
+```
+
+To merge common branch 'master' with your developing branch you have to switch to your developing branch and than from there do the commant to merge chenges:
+
+```bash
+  git merge master
 ```
 
 ## Control history of git
